@@ -6,7 +6,7 @@ app_name = 'mytasks'
 
 
 urlpatterns = [
-    path('', index_view, 'mytasks/index.html'),
+    path('', index_view, name='index'),
 ]
 
 

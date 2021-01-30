@@ -1,25 +1,20 @@
 import time
 
 from django.shortcuts import render
-
 from .models import Mesagesender
 from .tasks import send_mail_task
-
-
-# from .tasks import index_view, send_mail_task
-
-# from celery import current_app
+from celery import current_app
 
 
 def index_view(request):
     context = {}
-    tasksen = Mesagesender.objects.select_related('tasksender', 'tasksender__family').all()
+    mytasks = Mesagesender.objects.select_related('tasksender', 'tasksender__family').all()
     context['mytasks'] = 'mytasks'
     if request.method == 'POST':
-        result = send_mail_task.delay('scelery', 'text')
-        context['result.id'] = result.id
+        result = send_mail_task.delay('scelery', 'stext')
+        context['task_id'] = result.id
 
-    return render(request, 'reciever/index.html', context)
+    return render(request, 'mytasks/index.html', context)
 
 
 

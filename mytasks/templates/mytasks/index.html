@@ -1,8 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
 </head>
 <body>
 <h1>Mytasks</h1>
@@ -18,8 +23,8 @@
     <button type="submit">Сохранить</button>
 </form>
 <hr>
-    {% if result.id %}
-        <a href="#">{{result.id}}</a>
+    {% if task_id %}
+        <a href="/status/?task_id={{task_id}}">{{task_id}}</a>
     {% endif %}
 </body>
 </html>
