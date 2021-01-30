@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Mytasks</h1>
+
+<ul>
+    {% for s in fields %}
+    <li>{{fields.st1}} ({{fields.st2}} {{fields.st3}})</li>
+    {% endfor %}
+</ul>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Сохранить</button>
+</form>
+<hr>
+    {% if result.id %}
+        <a href="#">{{result.id}}</a>
+    {% endif %}
+</body>
+</html>
