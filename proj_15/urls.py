@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('mytasks/', include('mytasks.urls', namespace='mytasks')),
     path('cbv/', include('cbv.urls', namespace='cbv')),
+    path('info/', include('info.urls', namespace='info')),
     path('__debug__/', include(debug_toolbar.urls)),
 ]
 
