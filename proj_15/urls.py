@@ -9,9 +9,8 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mytasks/', include('mytasks.urls', namespace='mytasks')),
+    path('cbv/', include('cbv.urls', namespace='cbv')),
     path('__debug__/', include(debug_toolbar.urls)),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# path('cbv/', include('cbv.urls', namespace='cbv')),

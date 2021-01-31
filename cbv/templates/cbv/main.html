@@ -1,0 +1,22 @@
+{% block title %}
+Главная
+{% endblock %}
+{% block main %}
+    <h1>City</h1>
+    <ul class="list-group">
+        {% for city in object_list %}
+        <li class="list-group-item">
+            {% if city.company.image %}
+                <img class="img rounded-circle" width="150px" src="{{city.company.image.url}}">
+            {% endif %}
+
+            <a href="{% url 'city:detail' pk=city.pk %}">{{city.name}}</a>({{city.company}} {{city.company.companyprofile}})
+            <a href="{% url 'city:update' pk=city.pk %}" class="btn btn-info">Изменить</a>
+            <a href="{% url 'city:delete' pk=city.pk %}" class="btn btn-danger">Удалить</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <p></p>
+    <a href="{% url 'city:create' %}" class="btn btn-primary">Добавить</a>
+
+{% endblock %}

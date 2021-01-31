@@ -127,3 +127,8 @@ CELERY_RESULT_BACKEND = 'rpc://'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = '/tmp/app-messages'
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
+# LOGIN_SUCCESS_URL = '/'

@@ -1,6 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-from django.db import models
 
 from .translater import city_name_to_eng
 from .translater import prof_name_to_eng
