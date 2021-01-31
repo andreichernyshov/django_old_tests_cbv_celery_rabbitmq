@@ -1,20 +1,15 @@
 from django.shortcuts import render
 
-from django.views.generic import CreateView, DeleteView, UpdateView
-from django.views.generic import ListView, DetailView
-from django.views.generic import FormView, TemplateView
+# from django.views.generic import CreateView, DeleteView, UpdateView
+# from django.views.generic import ListView, DetailView
+# from django.views.generic import FormView, TemplateView
 
-from .models import CompanyProfile
-
-
-class CompanyProfileView(CreateView):
-    model = CompanyProfile
-    template_name = 'cbv/create.html'
+# from .models import CompanyProfile
 
 
-
-
-
+# class CompanyProfileView(CreateView):
+#    model = CompanyProfile
+#    template_name = 'cbv/create.html'
 
 
 """

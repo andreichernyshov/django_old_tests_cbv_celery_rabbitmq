@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import CompanyProfileView
+# from .views import CompanyProfileView
 
-app_name = 'cbv'
+# app_name = 'cbv'
 
-urlpatterns = [
-    path('create/', CompanyProfileView.as_view(), name='create.html'),
-]
+# urlpatterns = [
+#    path('create/', CompanyProfileView.as_view(), name='create.html'),
+# ]

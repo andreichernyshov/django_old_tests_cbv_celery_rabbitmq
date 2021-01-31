@@ -17,5 +17,6 @@ def save_field():
 
 
 @shared_task
-def send_mail_task(subject, text, email):
-    send_mail(subject, text, 'zimacool@zimacool.com', [email], fail_silently=False)
+def send_mail_task(subject, when_to_do, email):
+    send_mail(subject, when_to_do, ['zimacool@zimacool.com'], fail_silently=False)
+    time.sleep(10)
