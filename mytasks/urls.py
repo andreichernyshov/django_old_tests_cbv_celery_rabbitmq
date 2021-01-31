@@ -1,12 +1,12 @@
 from django.urls import path
 
-from .views import index_view
+from .views import ContactFormView
 
 app_name = 'mytasks'
 
 
 urlpatterns = [
-    path('', index_view, name='index'),
+    path('contact/', ContactFormView.as_view(), name='contact.html'),
 ]
 
 
